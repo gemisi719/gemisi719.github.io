@@ -1,6 +1,6 @@
 body{
     background: red;
-    color: greenyellow; 
+    color: rgb(255, 179, 47); 
     padding:  10px;
     font-family: ariel;
 }
@@ -11,7 +11,7 @@ body{
 
 /* navigation menu*/
 nav{
-    background: yellow; 
+    background: blueviolet; 
     margin: 0 auto;
     margin-bottom: 20px;
     display: flex;
@@ -20,7 +20,7 @@ nav{
 h1{
     display: flex;
     align-items: center;
-    color: white;
+    color: orange;
     flex: 1;
     margin: 0;
 }
