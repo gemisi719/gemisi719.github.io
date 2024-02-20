@@ -44,8 +44,17 @@ $(function () {
     // You must decide the x position, y position, width, and height of the platforms
     // example usage: createPlatform(x,y,width,height)
 
-
-
+    createPlatform(1, 725, 1600, 20); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+    createPlatform(1150, 200, 20, 550); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+    createPlatform(400, 650, 200, 20); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+    createPlatform(725, 550, 200, 20); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+    createPlatform(850, 450, 200, 20); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+    createPlatform(550, 350, 200, 20); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+    createPlatform(850, 250, 200, 20); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+    createPlatform(1250, 350, 150, 20); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+    createPlatform(1350, 225, 50, 20); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+    createPlatform(200, 250, 200, 20); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+    
     
     // TODO 2
     // Create collectables
@@ -53,7 +62,9 @@ $(function () {
     // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
     // example usage: createCollectable(type, x, y, gravity, bounce)
 
-
+    createCollectable("steve", 1100, 350); // creates a "steve" collectible at the coordinates (500, 300), falling with a high gravity of 20, and bouncing with 50% bounce
+    createCollectable("grace", 250, 100, 20, 0.5); // creates a "grace" collectible at the coordinates (500, 300), falling with default gravity and bouncing with default bounce %
+    createCollectable("steve", 1200, 200); // creates a "grace" collectible at the coordinates (500, 300), falling with default gravity and bouncing with default bounce %    
 
 
     // TODO 3
@@ -62,7 +73,9 @@ $(function () {
     // Your wall choices are: 'top' 'left' 'right' and 'bottom'
     // example usage: createCannon(side, position, delay, width, height)
 
-
+    createCannon("left", 550, 650); // cannon on left wall, 600px down, shooting once per second
+    createCannon("top", 1250, 500); // cannon on left wall, 600px down, shooting once per second
+    createCannon("left", 250, 900); // cannon on left wall, 600px down, shooting once per second
 
 
     /////////////////////////////////////////////////
@@ -72,3 +85,24 @@ $(function () {
 
   registerSetup(setup);
 });
+
+createPlatform(1, 725, 1600, 20); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+createPlatform(1150, 200, 20, 550); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+createPlatform(400, 650, 200, 20); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+createPlatform(725, 550, 200, 20); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+createPlatform(850, 450, 200, 20); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+createPlatform(1100, 650, 50, 20); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+createPlatform(550, 350, 200, 20); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+createPlatform(850, 250, 200, 20); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+createPlatform(1250, 350, 150, 20); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+createPlatform(1350, 225, 50, 20); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+createPlatform(200, 250, 200, 20); // short but wide platform located 500 pixels from the left of the screen and 300 pixels from the top of the screen
+
+
+createCollectable("steve", 1100, 350); // creates a "steve" collectible at the coordinates (500, 300), falling with a high gravity of 20, and bouncing with 50% bounce
+createCollectable("grace", 250, 100, 20, 0.5); // creates a "grace" collectible at the coordinates (500, 300), falling with default gravity and bouncing with default bounce %
+createCollectable("steve", 1200, 200); // creates a "grace" collectible at the coordinates (500, 300), falling with default gravity and bouncing with default bounce %
+
+createCannon("left", 550, 650); // cannon on left wall, 600px down, shooting once per second
+createCannon("top", 1250, 500); // cannon on left wall, 600px down, shooting once per second
+createCannon("left", 250, 900); // cannon on left wall, 600px down, shooting once per second
