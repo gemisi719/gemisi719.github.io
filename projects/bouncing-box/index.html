@@ -6,20 +6,20 @@
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
-			width: 70px;
-			height: 70px;
-			background-color: teal;
-			font-size: 300%;
+			width: 50px;
+			height: 50px;
+			background-color: rgb(46, 235, 8);
+			font-size: 150%;
 			text-align: center;
 			user-select: none;
 			display: block;
 			position: absolute;
 			top: 100px;
-			left: 0px;  /* <--- Change me! */
+			left: 50px;  /* <--- Change me! */
 		}
 		.board{
 			height: 100vh;
-		}
+			background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkc3xYBjxkctCs_0wLSTXDH-XTGljuOJr4bAl1zl8xULoMV-91DTwCc69bqd6EZc1fJ3o:https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg&usqp=CAU);
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 
@@ -48,8 +48,9 @@
 			box.on('click', handleBoxClick);
 
 			// moves the Box to a new position on the screen along the X-Axis
-			function moveBoxTo(newPositionX) {
-				box.css("left", newPositionX);
+			function moveBoxTo(newPositionX, newPositionY) {
+				box.css("left", newPositionX)
+				box.css('top', newPositionY);
 			}
 
 			// changes the text displayed on the Box
@@ -62,18 +63,43 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
-
-			
+			var positionX = 0;
+			var points = 0;
+			var speed = 10;
+			var positionY = 10;
+			var speedY = 10;
+			var boardHeight = jQuery(window).height();
+			var randNum = Math.random() * boardWidth;
+			var randNumy = Math.random() * boardHeight;
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
 			function update() {
-				
+				/* Your Code to Increase positionX by 10 HERE */
+				positionX = positionX + speed;
+				positionY = positionY + speedY;
 
+				moveBoxTo(positionX, positionY);
+
+				if (positionX > boardWidth) {
+					speed = speed * -1;
+				}
+				if (positionX < 0) {
+					speed = speed * -1;
+				}
+				if (positionY > boardHeight) {
+					speedY = speedY * -1;
+				}
+				if (positionY < 0) {
+					speedY = speedY * -1;
+				}
 			};
+
+			if (conditionIsTrue) {
+				//then do X, Y and Z
+			}
 
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
@@ -81,8 +107,23 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
+				positionX = randNum;
+				points = points + 1;
+				speed = speed + 3;
+				changeBoxText(points);
 				
-
+			if (speed > 0) {
+				speed = speed + 3;
+			}
+			else {
+				 speed = speed -3;
+			}
+			if (speedY > 0) {
+			  speedY = speedY + 3;
+			}
+			else {
+			   speedY = speedY -3;
+			}
 
 			};
 		})();
