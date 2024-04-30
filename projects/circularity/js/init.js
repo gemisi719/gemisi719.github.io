@@ -76,13 +76,13 @@ for (var i = 0; i < 100; i++) {
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
             if ( circle.y < 0 ) {
-                circle.y < 0;
+                circle.y = canvas.height;
             }
             if ( circle.y > canvas.height ) {
                 circle.y = 0;
             }
             if ( circle.x < 0 ) {
-                circle.x < 0;
+                circle.x = canvas.width;
             }
 
 
